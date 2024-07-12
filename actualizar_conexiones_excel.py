@@ -19,7 +19,7 @@ def actualizar_conexiones(directorio):
     # Recorremos todos los archivos en el directorio especificado
     for filename in os.listdir(directorio):
         # Solo seleccionamos las hojas de cálculo, evitando los archivos ocultos
-        if filename.endswith(".xlsx") or filename.endswith(".xlsm") and not filename.startswith("~"):
+        if (filename.endswith(".xlsx") or filename.endswith(".xlsm")) and not filename.startswith("~"):
             file_path = os.path.join(directorio, filename)
             print(f"Actualizando conexiones de datos en: {file_path}")
 
